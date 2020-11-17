@@ -1,0 +1,46 @@
+{
+  "name": "Karyawan",
+  "fields": [
+    {
+      "fieldName": "nik",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "unique", "required"],
+      "fieldValidateRulesMaxlength": "10"
+    },
+    {
+      "fieldName": "namaKaryawan",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "jabatan",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "karyawan",
+      "otherEntityRelationshipName": "karyawan",
+      "relationshipName": "karyawan"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "karyawan",
+      "otherEntityRelationshipName": "karyawan",
+      "relationshipName": "karyawan",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201117091741",
+  "entityTableName": "karyawan",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "RelationInOneTable",
+  "applications": "*",
+  "microserviceName": "RelationInOneTable"
+}
