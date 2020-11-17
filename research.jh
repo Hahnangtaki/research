@@ -1,0 +1,23 @@
+entity Karyawan {
+	nik String maxlength(10) unique required
+	namaKaryawan String 
+    jabatan String
+}
+
+
+/*
+relationship OneToMany {
+	Karyawan to Karyawan
+}
+*/
+
+// Set pagination options
+paginate Instrument with pagination
+
+dto * with mapstruct
+
+// Set service options to all except few
+//service * with serviceImpl
+
+// Set an angular suffix
+angularSuffix * with mySuffix
